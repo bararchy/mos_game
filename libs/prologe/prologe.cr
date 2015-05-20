@@ -3,7 +3,7 @@ class Prologue
   def self.story_prologue(player_char)
     puts "The flowers bloomed all over the horizon, hot, blazing, like hundreds of small suns."
     puts a_bomb
-    puts "Ripples of dust and scorched air burned everything in there path."
+    puts "Ripples of dust and scorched air burned everything in their path."
     puts "You can fell the waves of invisible fire getting closer...your skin begins to burn.."
     puts "(enter)"
     gets
