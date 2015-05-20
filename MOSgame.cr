@@ -25,7 +25,11 @@ class MOSgame
     puts "Now, lets begin..(enter)"
     gets
     system("clear")
-    Prologe.story_prologe(player_char)
+    Prologue.story_prologue(player_char)
+    puts "Hope you enjoyed To Be Continued".colorize(:green)
+    puts "(enter)"
+    gets
+    exit 0
   end
 
 

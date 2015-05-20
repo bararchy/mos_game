@@ -1,5 +1,5 @@
 class CharPage
-  property :agility, :strength, :intelligence, :health, :mana, :karma, :char_name, :char_gender
+  property :agility, :strength, :intelligence, :health, :mana, :karma, :char_name, :char_gender, :inventory, :expireance
 
   def initialize(char_set_hash)
     @char_name ||= char_set_hash[:char_name]
@@ -11,6 +11,7 @@ class CharPage
     @mana = 0
     @karma = 5
     @money = 0
+    @expireance = 0
     @inventory = [] of String
   end
 
