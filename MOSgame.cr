@@ -2,10 +2,12 @@
 # MOS_rpg_game -- Mini Offline Singleplayer Game :)
 # By Bar.Hofesh at safe-t.com
 require "./libs/**"
+require "colorize"
 
 class MOSgame
 
   def self.init
+    system("clear")
     welcome
     puts "Before we start I need you to answer a few questions please"
     puts "What is your name?: "
@@ -20,6 +22,10 @@ class MOSgame
     populate = {:char_gender => char_gender, :char_name => char_name}
     player_char = CharPage.new(populate)
     player_char.char_creation
+    puts "Now, lets begin..(enter)"
+    gets
+    system("clear")
+    Prologe.story_prologe(player_char)
   end
 
 
@@ -33,7 +39,7 @@ class MOSgame
            ██ ▀▀ ██  ██    ██       ▀██  ██    ██  ▄██▀▀▀██  ██ ██ ██  ██▀▀▀▀▀▀
            ██    ██   ██▄▄██   █▄▄▄▄▄█▀  ▀██▄▄███  ██▄▄▄███  ██ ██ ██  ▀██▄▄▄▄█
            ▀▀    ▀▀    ▀▀▀▀     ▀▀▀▀▀     ▄▀▀▀ ██   ▀▀▀▀ ▀▀  ▀▀ ▀▀ ▀▀    ▀▀▀▀▀
-                                          ▀████▀▀",
+                                          ▀████▀▀".colorize(:yellow),
           "\r\n             Version 0.1\r\n"].join
   end
 end
