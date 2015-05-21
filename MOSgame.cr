@@ -34,11 +34,10 @@ class MOSgame
     player_char.expireance += 10
     # Start of chapter 1
     player_char = Chapter1.story_chapter1(player_char)
-    puts "Hope you enjoyed To Be Continued".colorize(:green)
     if player_char
-      puts "Game Over"
       player_char.parse_page
     end
+    puts "Hope you enjoyed To Be Continued".colorize(:green)
     puts "(enter)"
     gets
     exit 0

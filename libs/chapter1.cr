@@ -1,6 +1,7 @@
 class Chapter1
 
   def self.story_chapter1(player_char)
+    player_char
     system("clear")
     puts AsciiArt.chapter_1
     puts "\r\n\r\n"
@@ -18,20 +19,28 @@ class Chapter1
     choise = gets
     system("clear")
     if choise =~ /d/i
-      desert
+      desert(player_char)
     elsif choise =~ /c/i
-      city
+      city(player_char)
     end
     return player_char
   end
 
-  def self.city
-    puts "You go forward to the direction of the city, you "
+  def self.city(player_char)
+    puts "You go forward to the direction of the city, walking down the hill is much faster then climbing."
+    puts "Looking at the moon light hitting the distance buildings you recall something about the morning, about the sun..."
+    if player_char.intelligence >= 1
+      puts "Intelligence check successful !".colorize(:green)
+      puts "You have a felling you should get to the nearest building as soon as possible, but you can't remember why.."
+    end
+    puts "(enter)"
+    gets
+    system("clear")
   end
 
 
 
-  def self.desert
+  def self.desert(player_char)
 
   end
 

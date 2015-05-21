@@ -35,6 +35,14 @@ class CharPage
     puts "|Health: #{@health}"
     puts "|Mana: #{@mana}"
     puts "|Karma: #{@karma}"
+    puts "|Expireance: #{@expireance}"
+    puts "---------------------".colorize(:blue)
+    puts "|      Inventory     |".colorize(:green)
+    puts "---------------------".colorize(:blue)
+    @inventory.each do |item|
+      puts "|#{item}"
+    end
+    puts "---------------------".colorize(:blue)
     puts "\r\n\r\n"
   end
 
