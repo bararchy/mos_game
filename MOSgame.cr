@@ -1,6 +1,7 @@
 # This is a try at creating a small game
 # MOS_rpg_game -- Mini Offline Singleplayer Game :)
 # By Bar.Hofesh at safe-t.com
+LD_LIBRARY_PATH="./ext/"
 require "./libs/**"
 require "colorize"
 
