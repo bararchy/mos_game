@@ -9,7 +9,7 @@ class MOSgame
 
   def self.init
     system("clear")
-    welcome
+    puts AsciiArt.welcome_logo
     puts "Before we start I need you to answer a few questions please"
     puts "What is your name?: "
     char_name = gets.to_s.chomp
@@ -26,27 +26,24 @@ class MOSgame
     puts "Now, lets begin..(enter)"
     gets
     system("clear")
-    Prologue.story_prologue(player_char)
+    # Start of Prologue
+    player_char = Prologue.story_prologue(player_char)
+    puts "+10 EXP Added to your character".colorize(:green)
+    puts "(enter)"
+    gets
+    player_char.expireance += 10
+    # Start of chapter 1
+    player_char = Chapter1.story_chapter1(player_char)
     puts "Hope you enjoyed To Be Continued".colorize(:green)
+    if player_char
+      puts "Game Over"
+      player_char.parse_page
+    end
     puts "(enter)"
     gets
     exit 0
   end
 
-
-  def self.welcome
-    puts ["Hello and welcome to..\r\n",
-          "
-           ▄▄▄  ▄▄▄    ▄▄▄▄      ▄▄▄▄
-           ███  ███   ██▀▀██   ▄█▀▀▀▀█
-           ████████  ██    ██  ██▄        ▄███▄██   ▄█████▄  ████▄██▄   ▄████▄
-           ██ ██ ██  ██    ██   ▀████▄   ██▀  ▀██   ▀ ▄▄▄██  ██ ██ ██  ██▄▄▄▄██
-           ██ ▀▀ ██  ██    ██       ▀██  ██    ██  ▄██▀▀▀██  ██ ██ ██  ██▀▀▀▀▀▀
-           ██    ██   ██▄▄██   █▄▄▄▄▄█▀  ▀██▄▄███  ██▄▄▄███  ██ ██ ██  ▀██▄▄▄▄█
-           ▀▀    ▀▀    ▀▀▀▀     ▀▀▀▀▀     ▄▀▀▀ ██   ▀▀▀▀ ▀▀  ▀▀ ▀▀ ▀▀    ▀▀▀▀▀
-                                          ▀████▀▀".colorize(:yellow),
-          "\r\n             Version 0.1\r\n"].join
-  end
 end
 
 MOSgame.init
