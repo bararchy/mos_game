@@ -4,7 +4,18 @@ Mini Offline Singleplayer game in Crystal
 ## About
 
 This is a first try, a first try in creating a game and first try in creating a game in Crystal.
-
+```
+           ▄▄▄  ▄▄▄    ▄▄▄▄      ▄▄▄▄
+           ███  ███   ██▀▀██   ▄█▀▀▀▀█
+           ████████  ██    ██  ██▄        ▄███▄██   ▄█████▄  ████▄██▄   ▄████▄
+           ██ ██ ██  ██    ██   ▀████▄   ██▀  ▀██   ▀ ▄▄▄██  ██ ██ ██  ██▄▄▄▄██
+           ██ ▀▀ ██  ██    ██       ▀██  ██    ██  ▄██▀▀▀██  ██ ██ ██  ██▀▀▀▀▀▀
+           ██    ██   ██▄▄██   █▄▄▄▄▄█▀  ▀██▄▄███  ██▄▄▄███  ██ ██ ██  ▀██▄▄▄▄█
+           ▀▀    ▀▀    ▀▀▀▀     ▀▀▀▀▀     ▄▀▀▀ ██   ▀▀▀▀ ▀▀  ▀▀ ▀▀ ▀▀    ▀▀▀▀▀
+                                          ▀████▀▀
+```
+The game is a terminal, text based game, with choises and charcter progression.
+Give it a try :)
 
 ## How to play
 
