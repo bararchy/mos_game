@@ -33,6 +33,14 @@ And execute
 ```
 
 You can also compile the game from sources using the Crystal compiler
+## How to compile
+If you have the Crystal compiler then just
+```
+crystal build MOSgame.cr --release
+```
+
+Else, download the compiler here:
+http://crystal-lang.org/docs/installation/index.html
 
 
 Enjoy !
