@@ -4,6 +4,9 @@
 LD_LIBRARY_PATH="./ext/"
 require "./libs/**"
 require "colorize"
+require "curses"
+require "socket"
+require "openssl"
 
 class MOSgame
 
@@ -14,10 +17,10 @@ class MOSgame
     puts "What is your name?: "
     char_name = gets.to_s.chomp
     puts "Are you a (m)ale or (f)emale?: "
-    char_gender = gets.to_s.chomp
-    if char_gender.match(/(f|female)/)
+    char_gender = gets until char_gender =~ /(f|m)/i
+    if char_gender =~ /f/i
       char_gender = "female"
-    elsif char_gender.match(/(m|male)/)
+    elsif char_gender =~ /m/i
       char_gender = "male"
     end
     populate = {:char_gender => char_gender, :char_name => char_name}
