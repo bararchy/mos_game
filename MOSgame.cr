@@ -17,7 +17,10 @@ class MOSgame
     puts "What is your name?: "
     char_name = gets.to_s.chomp
     puts "Are you a (m)ale or (f)emale?: "
-    char_gender = gets until char_gender =~ /(f|m)/i
+    char_gender = gets
+    until char_gender =~ /(f|m)/i
+      char_gender = gets
+    end
     if char_gender =~ /f/i
       char_gender = "female"
     elsif char_gender =~ /m/i

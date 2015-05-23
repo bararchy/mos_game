@@ -67,7 +67,10 @@ class CharPage
       puts "press ('a'/'A') to add a point to agility"
       puts "press ('s'/'S') to add a point to strength"
       puts "press ('i'/'I') to add a point to intelligence"
-      add_to = gets until add_to =~ /(a|s|i)/i
+      add_to = gets
+      until add_to =~ /(a|s|i)/i
+        add_to = gets
+      end
       if add_to
         if add_to =~ /a/i
           @agility += 1
