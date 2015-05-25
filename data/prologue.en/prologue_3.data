@@ -1,0 +1,7 @@
+You get up and take a good look around.
+There is no one there, all you can see is the small fire with the cauldron, and something bubbling inside.
+A little bit further you can see a hill, the hill is circling you,
+giving you the sense that you are inside a crater of some sort.
+
+              would you like to see what's in the (c)auldron ? or try to climb the (h)ill ?##bold
+options(c,h)

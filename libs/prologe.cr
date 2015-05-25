@@ -6,22 +6,11 @@ class Prologue
     puts AsciiArt.a_bomb
     gets
     system("clear")
-    puts "You get a grip and look around, focusing your eyes, there is a small fire with a cauldron on it"
     puts AsciiArt.a_culdron
-    puts "You glimpse carefully around, but all you can see is dirt and rocks."
-    puts "Would you like to (g)et up ? or pretend you are still (s)leeping?: "
-    choise = gets
-    until choise =~ /(g|s)/i
-      choise = gets
-    end
+    ReadParser.parse_file(File.read("./data/prologue.en/prologue_2.data"))
+    gets
     system("clear")
-    if choise =~ /s/i
-      puts "You keep laying down, waiting to see who is it that waked you up, after a few minutes where nothing happens"
-    end
-    puts "you get up and take a good look around"
-    puts "There is no one there, all you can see is the small fire with the cauldron, and something bubbling inside"
-    puts "A little bit further you can see a hill, the hill is circling you, giving you the sense that you are inside a crater of some sort."
-    puts "would you like to see what's in the (c)auldron ? or try to climb the (h)ill ?"
+    ReadParser.parse_file(File.read("./data/prologue.en/prologue_3.data"))
     choise = gets
     until choise =~ /(c|h)/i
       choise = gets

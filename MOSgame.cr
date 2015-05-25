@@ -4,9 +4,6 @@
 LD_LIBRARY_PATH="./ext/"
 require "./libs/**"
 require "colorize"
-require "curses"
-require "socket"
-require "openssl"
 
 class MOSgame
 
