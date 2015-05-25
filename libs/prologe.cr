@@ -17,19 +17,16 @@ class Prologue
     end
     system("clear")
     if choise =~ /c/i
-      puts "you walk slowly towards the cauldron, inside is a bubbling liquid with kind of brownish color."
-      puts "Would you like to (t)aste it ? or go away and try to climb the (h)ill ?"
+      Text::Parser::Box.parse(File.read("./data/prologue.en/prologue_3_c.data"), STDOUT)
       choise = gets
       until choise =~ /(t|h)/i
         choise = gets
       end
       if choise =~ /t/i
-        puts "you take a small metallic cup that lies beneath the cauldron, fill it with the brown goo and take a sip"
-        puts "The goo's taste is like some kind of potato stew, nothing else seems to happen, but you think there is need for more salt."
-        puts "\r\nYou add the small cup to your inventory".colorize(:green)
+        system("clear")
+        Text::Parser::Box.parse(File.read("./data/prologue.en/prologue_3_c_t.data"), STDOUT)
         puts AsciiArt.a_cup
         player_char.inventory << "Small Cup"
-        puts "(enter)"
         gets
       end
     end

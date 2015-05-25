@@ -36,6 +36,7 @@ You can also compile the game from sources using the Crystal compiler
 ## How to compile
 If you have the Crystal compiler then just
 ```
+crystal deps update
 crystal build MOSgame.cr --release
 ```
 
