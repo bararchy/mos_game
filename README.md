@@ -44,6 +44,7 @@ http://crystal-lang.org/docs/installation/index.html
 
 
 ## To-Do list
+
 [] More stroy
 [] A way to staticlly link the binery and get rid of the /ext/ folder
 [] Get help with building on Ubutnu (some one who dont care to compile the game and upload the binery back)
