@@ -4,6 +4,7 @@
 LD_LIBRARY_PATH="./ext/"
 require "./libs/**"
 require "colorize"
+require "text-parser"
 
 class MOSgame
 

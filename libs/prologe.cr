@@ -2,15 +2,15 @@ class Prologue
 
   def self.story_prologue(player_char)
     puts AsciiArt.prologue
-    ReadParser.parse_file(File.read("./data/prologue.en/prologue_1.data"))
+    Text::Parser::Box.parse(File.read("./data/prologue.en/prologue_1.data"), STDOUT)
     puts AsciiArt.a_bomb
     gets
     system("clear")
     puts AsciiArt.a_culdron
-    ReadParser.parse_file(File.read("./data/prologue.en/prologue_2.data"))
+    Text::Parser::Box.parse(File.read("./data/prologue.en/prologue_2.data"), STDOUT)
     gets
     system("clear")
-    ReadParser.parse_file(File.read("./data/prologue.en/prologue_3.data"))
+    Text::Parser::Box.parse(File.read("./data/prologue.en/prologue_3.data"), STDOUT)
     choise = gets
     until choise =~ /(c|h)/i
       choise = gets
