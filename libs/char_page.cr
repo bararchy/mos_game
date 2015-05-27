@@ -47,11 +47,7 @@ class CharPage
   end
 
   def char_creation
-    puts "Ok, let's create a character for you to play with"
-    puts "We have three basic abilities, and three status bars"
-    puts "You are going to get 3 points to start with, and you will choose which"
-    puts "abilities you want those points invested at."
-    puts "press enter to continue..."
+    Text::Parser::Box.parse(File.read("./data/char_creation.en/char_creation_1.data"), STDOUT)
     gets
     system("clear")
     points = 3

@@ -32,9 +32,6 @@ class MOSgame
     system("clear")
     # Start of Prologue
     player_char = Prologue.story_prologue(player_char)
-    puts "+10 EXP Added to your character".colorize(:green)
-    puts "(enter)"
-    gets
     player_char.expireance += 10
     # Start of chapter 1
     player_char = Chapter1.story_chapter1(player_char)
