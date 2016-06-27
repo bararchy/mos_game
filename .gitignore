@@ -1,6 +1,7 @@
 .crystal/
 # Compiled source #
 ###################
+*.shards
 *.com
 *.class
 *.dll
