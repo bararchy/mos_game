@@ -1,9 +1,9 @@
 class CharPage
   property :agility, :strength, :intelligence, :health, :mana, :karma, :char_name, :char_gender, :inventory, :expireance
 
-  def initialize(char_set_hash)
-    @char_name ||= char_set_hash[:char_name]
-    @char_gender ||= char_set_hash[:char_gender]
+  def initialize(char_set_hash : Hash)
+    @char_name = char_set_hash[:char_name] as String
+    @char_gender = char_set_hash[:char_gender] as String
     @agility = 0
     @strength = 0
     @intelligence = 0
