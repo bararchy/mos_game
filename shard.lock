@@ -1,6 +1,6 @@
 version: 1.0
 shards:
-  minitest:
+  text-parser:
     github: bararchy/text-parser
-    commit: 45eaa7522e4bb277257a7591c387a0d657b36f3e
+    commit: b01dff40dff876451f81e0db6fb435e00d646583
 

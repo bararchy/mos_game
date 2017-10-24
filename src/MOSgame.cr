@@ -2,8 +2,9 @@
 # MOS_rpg_game -- Mini Offline Singleplayer Game :)
 # By Bar.Hofesh at safe-t.com
 LD_LIBRARY_PATH="../ext/"
-require "../libs/**"
+require "../src/**"
 require "colorize"
+require "text-parser"
 
 class MOSgame
 
@@ -23,8 +24,8 @@ class MOSgame
     elsif char_gender =~ /m/i
       char_gender = "male"
     end
-    populate = {:char_gender => char_gender, :char_name => char_name}
-    player_char = CharPage.new(populate)
+    populate = {:char_gender => char_gender.to_s, :char_name => char_name.to_s}
+    player_char = CharPage.new(populate.not_nil!)
     player_char.char_creation
     puts "Now, lets begin..(enter)"
     gets

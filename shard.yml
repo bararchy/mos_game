@@ -4,8 +4,8 @@ version: 0.1.0
 authors:
   - Bar Hofesh <bar.hofesh@gmail.com>
 
-development_dependencies:
-  minitest:
-    github: bararchy/text-parser
+dependencies:
+    text-parser:
+      github: bararchy/text-parser
 
 license: MIT
